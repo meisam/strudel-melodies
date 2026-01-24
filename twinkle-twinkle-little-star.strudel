@@ -1,0 +1,27 @@
+setcpm(10/6)
+
+let melody = `[
+    c5 c5 g5 g5 a5 a5 g5 ~
+    f5 f5 e5 e5 d5 d5 c5 ~
+    g5 g5 f5 f5 e5 e5 d5 ~
+    g5 g5 f5 f5 e5 e5 d5 ~
+    c5 c5 g5 g5 a5 a5 g5 ~
+    f5 f5 e5 e5 d5 d5 c5 ~
+]`
+$: note(melody)
+  .sound("gm_electric_guitar_muted")
+  .gain(0.3)
+  .delay(.9)
+  .color("coral")
+  ._punchcard()
+
+$: note(melody)
+  .sound("piano")
+  .gain(4)
+  .attack(.1)
+  .decay(.1)
+  .sustain(3.5)
+  .release(.1)
+  .color("coral")
+  ._punchcard()
+
